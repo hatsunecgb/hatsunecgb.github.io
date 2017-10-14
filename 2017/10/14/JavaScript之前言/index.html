@@ -88,7 +88,7 @@
 <meta property="og:description" content="javascript实现javascript组成 核心(ECMAscript) 文档对象模型(DOM) 浏览器对象模型(BOM)  ECMAscript 由ECM-262定义的ECMAscript与Web浏览器没有依赖关系,其并不包含输入和输出定义ECMA-262定义的只是这门语言的基础,而在此基础上可以构建更完善的脚本语言.Web浏览器是ECMAscript实现的可能宿主环境之一.宿主环境不仅提">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/0LRTMYh.png">
-<meta property="og:updated_time" content="2017-10-14T13:21:49.174Z">
+<meta property="og:updated_time" content="2017-10-14T13:56:46.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript之前言">
 <meta name="twitter:description" content="javascript实现javascript组成 核心(ECMAscript) 文档对象模型(DOM) 浏览器对象模型(BOM)  ECMAscript 由ECM-262定义的ECMAscript与Web浏览器没有依赖关系,其并不包含输入和输出定义ECMA-262定义的只是这门语言的基础,而在此基础上可以构建更完善的脚本语言.Web浏览器是ECMAscript实现的可能宿主环境之一.宿主环境不仅提">
@@ -365,6 +365,21 @@
 <li>对cookie的支持</li>
 <li>像XMLHttpRequest和IEActiveXObject这样的自定义对象</li>
 </ul>
+<h3 id="javascript插入位置"><a href="#javascript插入位置" class="headerlink" title="javascript插入位置"></a>javascript插入位置</h3><ol>
+<li>放在<code>&lt;head&gt;</code>标签中,再利用defer属性延迟加载.(延迟加载)</li>
+<li>放在<code>&lt;body&gt;</code>标签内容的后面</li>
+<li>与defer类似,HTML5为<code>&lt;script&gt;</code>元素定义了async属性,且都只适用于外部脚本文件,但不同的是,标记为async的脚本并不能保证按照指定它们的先后顺序执行.<br>所以确保多个JavaScript脚本之间互不依赖非常重要.<br>指定async属性的目的是<strong>不让页面等待多个脚本下载和执行</strong>,从而异步加载页面其他内容.因此,异步脚本不要在加载期间修改DOM  </li>
+</ol>
+<p><strong>异步脚本一定会在页面load事件前执行,但可能会在DOMContentLoaded事件触发之前或之后执行</strong></p>
+<p>###小结:</p>
+<ul>
+<li>ECMAScript由ECMA-262定义,提供核心语言功能</li>
+<li>DOM提供访问和操作页面内容的方法和接口</li>
+<li>BOM提供与浏览器交互的方法和接口</li>
+<li>所有<code>&lt;script&gt;</code>元素会按照他们在页面出现的先后顺序依次被解析,在不使用defer和async的情况下</li>
+<li>defer属性可以让脚本在文档完全呈现后再执行.延迟脚本总是按照指定它们的顺序执行</li>
+<li>async属性可以表示当前脚本不必等待其他脚本,也不必阻塞文档呈现.不能保证异步脚本按照他们在页面出现的顺序执行.</li>
+</ul>
 
       
     </div>
@@ -513,7 +528,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -562,7 +577,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript实现"><span class="nav-text">javascript实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript组成"><span class="nav-text">javascript组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ECMAscript"><span class="nav-text">ECMAscript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档对象模型-DOM"><span class="nav-text">文档对象模型(DOM)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器对象模型-BOM"><span class="nav-text">浏览器对象模型(BOM)</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript实现"><span class="nav-text">javascript实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript组成"><span class="nav-text">javascript组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ECMAscript"><span class="nav-text">ECMAscript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档对象模型-DOM"><span class="nav-text">文档对象模型(DOM)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器对象模型-BOM"><span class="nav-text">浏览器对象模型(BOM)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript插入位置"><span class="nav-text">javascript插入位置</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
