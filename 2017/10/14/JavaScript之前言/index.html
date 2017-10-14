@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="javascript实现javascript组成 核心(ECMAscript) 文档对象模型(DOM) 浏览器对象模型(BOM)  ECMAscript 由ECM-262定义的ECMAscript与Web浏览器没有依赖关系,其并不包含输入和输出定义ECMA-262定义的只是这门语言的基础,而在此基础上可以构建更完善的脚本语言.Web浏览器是ECMAscript实现的可能宿主环境之一.宿主环境不仅提">
+<meta name="description" content="javascript实现javascript组成 核心(ECMAscript) 文档对象模型(DOM) 浏览器对象模型(BOM)">
 <meta name="keywords" content="js,javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript之前言">
 <meta property="og:url" content="http://yoursite.com/2017/10/14/JavaScript之前言/index.html">
 <meta property="og:site_name" content="哼着小曲儿的度奈君">
-<meta property="og:description" content="javascript实现javascript组成 核心(ECMAscript) 文档对象模型(DOM) 浏览器对象模型(BOM)  ECMAscript 由ECM-262定义的ECMAscript与Web浏览器没有依赖关系,其并不包含输入和输出定义ECMA-262定义的只是这门语言的基础,而在此基础上可以构建更完善的脚本语言.Web浏览器是ECMAscript实现的可能宿主环境之一.宿主环境不仅提">
+<meta property="og:description" content="javascript实现javascript组成 核心(ECMAscript) 文档对象模型(DOM) 浏览器对象模型(BOM)">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/0LRTMYh.png">
-<meta property="og:updated_time" content="2017-10-14T13:56:46.752Z">
+<meta property="og:updated_time" content="2017-10-14T13:59:22.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript之前言">
-<meta name="twitter:description" content="javascript实现javascript组成 核心(ECMAscript) 文档对象模型(DOM) 浏览器对象模型(BOM)  ECMAscript 由ECM-262定义的ECMAscript与Web浏览器没有依赖关系,其并不包含输入和输出定义ECMA-262定义的只是这门语言的基础,而在此基础上可以构建更完善的脚本语言.Web浏览器是ECMAscript实现的可能宿主环境之一.宿主环境不仅提">
+<meta name="twitter:description" content="javascript实现javascript组成 核心(ECMAscript) 文档对象模型(DOM) 浏览器对象模型(BOM)">
 <meta name="twitter:image" content="https://i.imgur.com/0LRTMYh.png">
 
 
@@ -347,10 +347,8 @@
         <h1 id="javascript实现"><a href="#javascript实现" class="headerlink" title="javascript实现"></a>javascript实现</h1><h3 id="javascript组成"><a href="#javascript组成" class="headerlink" title="javascript组成"></a>javascript组成</h3><ul>
 <li>核心(ECMAscript)</li>
 <li>文档对象模型(DOM)</li>
-<li>浏览器对象模型(BOM)</li>
-</ul>
-<h3 id="ECMAscript"><a href="#ECMAscript" class="headerlink" title="ECMAscript"></a>ECMAscript</h3><p> 由ECM-262定义的ECMAscript与Web浏览器没有依赖关系,其并不包含输入和输出定义ECMA-262定义的只是这门语言的基础,而在此基础上可以构建更完善的脚本语言.<br>Web浏览器是ECMAscript实现的可能<strong>宿主环境之一</strong>.宿主环境不仅提供基本的实现,同时也会提供该语言的拓展,以便实现语言与环境之间的交互.  类似拓展有DOM,其他宿主环境有Node,Adobe flash等.<br>ECMA262由以下组成:  </p>
-<ul>
+<li>浏览器对象模型(BOM)<a id="more"></a>
+<h3 id="ECMAscript"><a href="#ECMAscript" class="headerlink" title="ECMAscript"></a>ECMAscript</h3>由ECM-262定义的ECMAscript与Web浏览器没有依赖关系,其并不包含输入和输出定义ECMA-262定义的只是这门语言的基础,而在此基础上可以构建更完善的脚本语言.<br>Web浏览器是ECMAscript实现的可能<strong>宿主环境之一</strong>.宿主环境不仅提供基本的实现,同时也会提供该语言的拓展,以便实现语言与环境之间的交互.  类似拓展有DOM,其他宿主环境有Node,Adobe flash等.<br>ECMA262由以下组成:  </li>
 <li>语法 - 类型 - 关键字 - 保留字 - 操作符 - 对象<br>JavaScript实现了ECMAScript</li>
 </ul>
 <h3 id="文档对象模型-DOM"><a href="#文档对象模型-DOM" class="headerlink" title="文档对象模型(DOM)"></a>文档对象模型(DOM)</h3><p>DOM把整个页面映射为一个多层节点结构.<br>HTML或XML页面中每个组成部分都是某种类型的节点,这些节点又包含着不同类型的数据.<br>如下<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span>Sample Page<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
