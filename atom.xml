@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-22T03:01:11.707Z</updated>
+  <updated>2017-10-22T03:55:59.341Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript之引用类型(二)</title>
+    <link href="http://yoursite.com/2017/10/22/JavaScript%E4%B9%8B%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B-%E4%BA%8C/"/>
+    <id>http://yoursite.com/2017/10/22/JavaScript之引用类型-二/</id>
+    <published>2017-10-22T03:07:24.000Z</published>
+    <updated>2017-10-22T03:55:59.341Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Date类型"><a href="#Date类型" class="headerlink" title="Date类型"></a>Date类型</h3><p>Date 对象用于处理日期和时间。<br>可以通过 new 关键词来定义 Date 对象。<a id="more"></a>以下代码定义了名为 myDate 的 Date 对象：<br>有四种方式初始化日期:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>() <span class="comment">// 当前日期和时间</span></div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(milliseconds) <span class="comment">//返回从 1970 年 1 月 1 日至今的毫秒数</span></div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(dateString)</div><div class="line"><span class="keyword">new</span> <span class="built_in">Date</span>(year, month, day, hours, minutes, seconds, milliseconds)</div></pre></td></tr></table></figure></p><p>上面的参数大多数都是可选的，在不指定的情况下，默认参数是0。<br>实例化一个日期的一些例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>()</div><div class="line"><span class="keyword">var</span> d1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"October 13, 1975 11:13:00"</span>)</div><div class="line"><span class="keyword">var</span> d2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">79</span>,<span class="number">5</span>,<span class="number">24</span>)</div><div class="line"><span class="keyword">var</span> d3 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">79</span>,<span class="number">5</span>,<span class="number">24</span>,<span class="number">11</span>,<span class="number">33</span>,<span class="number">0</span>)</div></pre></td></tr></table></figure></p><h3 id="对象方法"><a href="#对象方法" class="headerlink" title="对象方法"></a>对象方法</h3><p><a href="http://www.runoob.com/jsref/jsref-obj-date.html" title="对象方法" target="_blank" rel="external">http://www.runoob.com/jsref/jsref-obj-date.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Date类型&quot;&gt;&lt;a href=&quot;#Date类型&quot; class=&quot;headerlink&quot; title=&quot;Date类型&quot;&gt;&lt;/a&gt;Date类型&lt;/h3&gt;&lt;p&gt;Date 对象用于处理日期和时间。&lt;br&gt;可以通过 new 关键词来定义 Date 对象。
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript之引用类型(一)</title>
