@@ -254,6 +254,154 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/22/JavaScript之引用类型-一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="度奈">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="哼着小曲儿的度奈君">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/22/JavaScript之引用类型-一/" itemprop="url">JavaScript之引用类型(一)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-22T10:36:24+08:00">
+                2017-10-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Object类型"><a href="#Object类型" class="headerlink" title="Object类型"></a>Object类型</h3><h4 id="创建Object实例方法-字面量表示法"><a href="#创建Object实例方法-字面量表示法" class="headerlink" title="创建Object实例方法-字面量表示法"></a>创建Object实例方法-字面量表示法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">	name : <span class="string">"jack"</span></div><div class="line">	age : <span class="number">29</span> </div><div class="line">&#125;;</div><div class="line"><span class="string">``</span><span class="string">`  </span></div><div class="line"><span class="string">&lt;!-- more --&gt;</span></div><div class="line"><span class="string">#### 访问方法</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">`</span><span class="string">``</span> javascript</div><div class="line">alert(person.name); <span class="comment">//jack</span></div></pre></td></tr></table></figure>
+<h3 id="Array类型"><a href="#Array类型" class="headerlink" title="Array类型"></a>Array类型</h3><h4 id="创建方法"><a href="#创建方法" class="headerlink" title="创建方法"></a>创建方法</h4><p><code>var num = [1,2,3,4,5,6]</code></p>
+<h4 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h4><p><code>var n = num[0]</code></p>
+<h4 id="数组属性"><a href="#数组属性" class="headerlink" title="数组属性"></a>数组属性</h4><p><img src="https://i.imgur.com/CTWyuPq.png" alt=""></p>
+<h4 id="Array-对象属性"><a href="#Array-对象属性" class="headerlink" title="Array 对象属性"></a>Array 对象属性</h4><p><img src="https://i.imgur.com/ZtO0yO2.png" alt=""><br><img src="https://i.imgur.com/zTifXpY.png" alt=""></p>
+<h4 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span> (<span class="params">v1,v2</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> v2 - v1;</div><div class="line">values.sort(compare);</div><div class="line">alert (values); <span class="comment">//1,2,3,4,5,6</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="更多实例"><a href="#更多实例" class="headerlink" title="更多实例"></a>更多实例</h4><p><a href="http://www.runoob.com/js/js-obj-array.html" title="更多实例" target="_blank" rel="external">http://www.runoob.com/js/js-obj-array.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/18/JavaScript之执行环境及作用域/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1177,7 +1325,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
