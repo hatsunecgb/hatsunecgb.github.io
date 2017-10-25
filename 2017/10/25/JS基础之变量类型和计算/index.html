@@ -81,20 +81,18 @@
 
 
 
-<meta name="description" content="javascript实现javascript组成 核心(ECMAscript) 文档对象模型(DOM) 浏览器对象模型(BOM)">
+<meta name="description" content="typeof运算符12345678typeof underfined //underfinedtypeof &apos;abc&apos; //stringtypeof 123 //numbertypeof true //booleantypeof &amp;#123;&amp;#125; //objecttypeof [] //objecttypeof null //objecttypeof console.log typeof能">
 <meta name="keywords" content="js,javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript之前言">
-<meta property="og:url" content="http://yoursite.com/2017/10/14/JavaScript之前言/index.html">
+<meta property="og:title" content="JS基础之变量类型和计算">
+<meta property="og:url" content="http://yoursite.com/2017/10/25/JS基础之变量类型和计算/index.html">
 <meta property="og:site_name" content="哼着小曲儿的度奈君">
-<meta property="og:description" content="javascript实现javascript组成 核心(ECMAscript) 文档对象模型(DOM) 浏览器对象模型(BOM)">
+<meta property="og:description" content="typeof运算符12345678typeof underfined //underfinedtypeof &apos;abc&apos; //stringtypeof 123 //numbertypeof true //booleantypeof &amp;#123;&amp;#125; //objecttypeof [] //objecttypeof null //objecttypeof console.log typeof能">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.imgur.com/0LRTMYh.png">
-<meta property="og:updated_time" content="2017-10-14T14:02:12.791Z">
+<meta property="og:updated_time" content="2017-10-25T14:56:19.524Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript之前言">
-<meta name="twitter:description" content="javascript实现javascript组成 核心(ECMAscript) 文档对象模型(DOM) 浏览器对象模型(BOM)">
-<meta name="twitter:image" content="https://i.imgur.com/0LRTMYh.png">
+<meta name="twitter:title" content="JS基础之变量类型和计算">
+<meta name="twitter:description" content="typeof运算符12345678typeof underfined //underfinedtypeof &apos;abc&apos; //stringtypeof 123 //numbertypeof true //booleantypeof &amp;#123;&amp;#125; //objecttypeof [] //objecttypeof null //objecttypeof console.log typeof能">
 
 
 
@@ -124,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/14/JavaScript之前言/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/25/JS基础之变量类型和计算/"/>
 
 
 
 
 
-  <title>JavaScript之前言 | 哼着小曲儿的度奈君</title>
+  <title>JS基础之变量类型和计算 | 哼着小曲儿的度奈君</title>
   
 
 
@@ -257,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/14/JavaScript之前言/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/25/JS基础之变量类型和计算/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="度奈">
@@ -274,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaScript之前言</h1>
+          <h1 class="post-title" itemprop="name headline">JS基础之变量类型和计算</h1>
         
 
         <div class="post-meta">
@@ -286,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-14T20:26:52+08:00">
-                2017-10-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-25T22:30:23+08:00">
+                2017-10-25
               </time>
             
 
@@ -346,39 +344,21 @@
       
 
       
-        <h1 id="javascript实现"><a href="#javascript实现" class="headerlink" title="javascript实现"></a>javascript实现</h1><h3 id="javascript组成"><a href="#javascript组成" class="headerlink" title="javascript组成"></a>javascript组成</h3><ul>
-<li>核心(ECMAscript)</li>
-<li>文档对象模型(DOM)</li>
-<li>浏览器对象模型(BOM)<a id="more"></a>
-<h3 id="ECMAscript"><a href="#ECMAscript" class="headerlink" title="ECMAscript"></a>ECMAscript</h3>由ECM-262定义的ECMAscript与Web浏览器没有依赖关系,其并不包含输入和输出定义ECMA-262定义的只是这门语言的基础,而在此基础上可以构建更完善的脚本语言.<br>Web浏览器是ECMAscript实现的可能<strong>宿主环境之一</strong>.宿主环境不仅提供基本的实现,同时也会提供该语言的拓展,以便实现语言与环境之间的交互.  类似拓展有DOM,其他宿主环境有Node,Adobe flash等.<br>ECMA262由以下组成:  </li>
-<li>语法 - 类型 - 关键字 - 保留字 - 操作符 - 对象<br>JavaScript实现了ECMAScript</li>
+        <h3 id="typeof运算符"><a href="#typeof运算符" class="headerlink" title="typeof运算符"></a>typeof运算符</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> underfined <span class="comment">//underfined</span></div><div class="line"><span class="keyword">typeof</span> <span class="string">'abc'</span> <span class="comment">//string</span></div><div class="line"><span class="keyword">typeof</span> <span class="number">123</span> <span class="comment">//number</span></div><div class="line"><span class="keyword">typeof</span> <span class="literal">true</span> <span class="comment">//boolean</span></div><div class="line"><span class="keyword">typeof</span> &#123;&#125; <span class="comment">//object</span></div><div class="line"><span class="keyword">typeof</span> [] <span class="comment">//object</span></div><div class="line"><span class="keyword">typeof</span> <span class="literal">null</span> <span class="comment">//object</span></div><div class="line"><span class="keyword">typeof</span> <span class="built_in">console</span>.log</div></pre></td></tr></table></figure>
+<p><strong>typeof能识基本数据类型,引用类型无法区分,只能把函数区分出来</strong><br><a id="more"></a></p>
+<h3 id="变量计算-强制类型转换情况"><a href="#变量计算-强制类型转换情况" class="headerlink" title="变量计算 - 强制类型转换情况"></a>变量计算 - 强制类型转换情况</h3><ul>
+<li>字符串拼接</li>
+<li>==运算符</li>
+<li>if语句</li>
+<li>逻辑运算</li>
 </ul>
-<h3 id="文档对象模型-DOM"><a href="#文档对象模型-DOM" class="headerlink" title="文档对象模型(DOM)"></a>文档对象模型(DOM)</h3><p>DOM把整个页面映射为一个多层节点结构.<br>HTML或XML页面中每个组成部分都是某种类型的节点,这些节点又包含着不同类型的数据.<br>如下<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span>Sample Page<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><img src="https://i.imgur.com/0LRTMYh.png" alt=""><br>通过这个表示文档的树形图,开发人员可以借助DOM提供的API轻松自在的增删改替任何节点</p>
-<h3 id="浏览器对象模型-BOM"><a href="#浏览器对象模型-BOM" class="headerlink" title="浏览器对象模型(BOM)"></a>浏览器对象模型(BOM)</h3><p>BOM用来处理浏览器的窗口和框架,以及针对浏览器的拓展<br>如下:</p>
-<ul>
-<li>弹出新浏览器窗口的功能</li>
-<li>移动,缩放和关闭浏览器窗口的功能</li>
-<li>提供浏览器详细信息的navigator对象</li>
-<li>提供浏览器所加载页面的详细信息的location对象</li>
-<li>提供用户显示器分辨率详细信息的screen对象</li>
-<li>对cookie的支持</li>
-<li>像XMLHttpRequest和IEActiveXObject这样的自定义对象</li>
-</ul>
-<h3 id="javascript插入位置"><a href="#javascript插入位置" class="headerlink" title="javascript插入位置"></a>javascript插入位置</h3><ol>
-<li>放在<code>&lt;head&gt;</code>标签中,再利用defer属性延迟加载.(延迟加载)</li>
-<li>放在<code>&lt;body&gt;</code>标签内容的后面</li>
-<li>与defer类似,HTML5为<code>&lt;script&gt;</code>元素定义了async属性,且都只适用于外部脚本文件,但不同的是,标记为async的脚本并不能保证按照指定它们的先后顺序执行.<br>所以确保多个JavaScript脚本之间互不依赖非常重要.<br>指定async属性的目的是<strong>不让页面等待多个脚本下载和执行</strong>,从而异步加载页面其他内容.因此,异步脚本不要在加载期间修改DOM  </li>
-</ol>
-<p><strong>异步脚本一定会在页面load事件前执行,但可能会在DOMContentLoaded事件触发之前或之后执行</strong></p>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结:"></a>小结:</h3><ul>
-<li>ECMAScript由ECMA-262定义,提供核心语言功能</li>
-<li>DOM提供访问和操作页面内容的方法和接口</li>
-<li>BOM提供与浏览器交互的方法和接口</li>
-<li>所有<code>&lt;script&gt;</code>元素会按照他们在页面出现的先后顺序依次被解析,在不使用defer和async的情况下</li>
-<li>defer属性可以让脚本在文档完全呈现后再执行.延迟脚本总是按照指定它们的顺序执行</li>
-<li>async属性可以表示当前脚本不必等待其他脚本,也不必阻塞文档呈现.不能保证异步脚本按照他们在页面出现的顺序执行.</li>
-</ul>
+<h4 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">100</span>+<span class="number">10</span> <span class="comment">//10</span></div><div class="line"><span class="keyword">var</span> b = <span class="number">100</span>+<span class="string">'10'</span> <span class="comment">//'10010'</span></div></pre></td></tr></table></figure>
+<h4 id="运算符"><a href="#运算符" class="headerlink" title="==运算符"></a>==运算符</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="number">100</span> == <span class="string">'100'</span> <span class="comment">//true</span></div><div class="line"><span class="number">0</span> ==<span class="string">''</span> /<span class="literal">true</span></div><div class="line"><span class="literal">null</span> == underfined <span class="comment">//true</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> (obj.a == <span class="literal">null</span>) &#123;</div><div class="line">	<span class="comment">//这里相当于 obj,a === null || obj.a === underfined简写形式</span></div><div class="line">	<span class="comment">//这是jquery源码中推荐的写法</span></div><div class="line">	<span class="comment">//强迫症,其他一律 "==="</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="literal">true</span></div><div class="line"><span class="keyword">if</span>(a) &#123;</div><div class="line">	<span class="comment">//...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> b = <span class="number">100</span></div><div class="line"><span class="keyword">if</span>(b) &#123; <span class="comment">//true</span></div><div class="line">	<span class="comment">//...</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> c = <span class="string">''</span></div><div class="line"><span class="keyword">if</span>(c)&#123; <span class="comment">//false</span></div><div class="line">	<span class="comment">//...	</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="number">10</span> &amp;&amp; <span class="number">0</span>) <span class="comment">//0</span></div><div class="line">conlosle.log(<span class="string">''</span> || <span class="string">'abc'</span>) <span class="comment">//'abc'</span></div><div class="line"><span class="built_in">console</span>.log(!<span class="built_in">window</span>.abc) <span class="comment">//true</span></div><div class="line"></div><div class="line"><span class="comment">//判断一个变量会被当做true还是false</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">100</span></div><div class="line"><span class="built_in">console</span>.log(!!a)</div></pre></td></tr></table></figure>
+<h4 id="js中内置函数"><a href="#js中内置函数" class="headerlink" title="js中内置函数"></a>js中内置函数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span></div><div class="line"><span class="built_in">Array</span></div><div class="line"><span class="built_in">Boolean</span></div><div class="line"><span class="built_in">Number</span></div><div class="line"><span class="built_in">String</span></div><div class="line"><span class="built_in">Function</span></div><div class="line"><span class="built_in">Date</span></div><div class="line"><span class="built_in">RegExp</span></div><div class="line"><span class="built_in">Error</span></div></pre></td></tr></table></figure>
+<h4 id="js按储存方式区分变量类型"><a href="#js按储存方式区分变量类型" class="headerlink" title="js按储存方式区分变量类型"></a>js按储存方式区分变量类型</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//值类型</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">10</span></div><div class="line"><span class="keyword">var</span> b = a</div><div class="line">a = <span class="number">11</span></div><div class="line"><span class="built_in">console</span>.log(b) <span class="comment">//10</span></div><div class="line"></div><div class="line"><span class="comment">//引用类型</span></div><div class="line"><span class="keyword">var</span> obj1 = &#123;<span class="attr">x</span>:<span class="number">100</span>&#125;</div><div class="line"><span class="keyword">var</span> obj2 = obj1</div><div class="line">obj1.x = <span class="number">200</span></div><div class="line"><span class="built_in">console</span>.log(obj2,x) <span class="comment">//200</span></div></pre></td></tr></table></figure>
+<h4 id="json"><a href="#json" class="headerlink" title="json"></a>json</h4><p>json只不过是一种JS对象而已<br><code>JSON.stringify({a:10,b:20})</code><br><code>JSON.parse(&#39;{&quot;a&quot;:10,&quot;b&quot;:20}&#39;)</code></p>
 
       
     </div>
@@ -411,8 +391,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/14/个人ui学习整理/" rel="next" title="个人ui学习整理">
-                <i class="fa fa-chevron-left"></i> 个人ui学习整理
+              <a href="/2017/10/22/JavaScript之引用类型-二/" rel="next" title="JavaScript之引用类型(二)">
+                <i class="fa fa-chevron-left"></i> JavaScript之引用类型(二)
               </a>
             
           </div>
@@ -421,8 +401,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/10/14/JavaScript之基本数据类型/" rel="prev" title="JavaScript之基本数据类型">
-                JavaScript之基本数据类型 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/10/25/JS基础之原型和原型链-原型/" rel="prev" title="JS基础之原型和原型链(原型)">
+                JS基础之原型和原型链(原型) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -587,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript实现"><span class="nav-text">javascript实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript组成"><span class="nav-text">javascript组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ECMAscript"><span class="nav-text">ECMAscript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文档对象模型-DOM"><span class="nav-text">文档对象模型(DOM)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器对象模型-BOM"><span class="nav-text">浏览器对象模型(BOM)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript插入位置"><span class="nav-text">javascript插入位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-text">小结:</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#typeof运算符"><span class="nav-text">typeof运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量计算-强制类型转换情况"><span class="nav-text">变量计算 - 强制类型转换情况</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串拼接"><span class="nav-text">字符串拼接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运算符"><span class="nav-text">==运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#if语句"><span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑运算符"><span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#js中内置函数"><span class="nav-text">js中内置函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#js按储存方式区分变量类型"><span class="nav-text">js按储存方式区分变量类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#json"><span class="nav-text">json</span></a></li></ol></li></ol></div>
             
 
           </div>

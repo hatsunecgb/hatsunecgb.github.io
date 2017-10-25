@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-22T06:50:41.937Z</updated>
+  <updated>2017-10-25T15:00:39.394Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS基础之原型和原型链(原型)</title>
+    <link href="http://yoursite.com/2017/10/25/JS%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE-%E5%8E%9F%E5%9E%8B/"/>
+    <id>http://yoursite.com/2017/10/25/JS基础之原型和原型链-原型/</id>
+    <published>2017-10-25T14:59:37.000Z</published>
+    <updated>2017-10-25T15:00:39.394Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;构造函数&quot;&gt;&lt;a href=&quot;#构造函数&quot; class=&quot;headerlink&quot; title=&quot;构造函数&quot;&gt;&lt;/a&gt;构造函数&lt;/h3&gt;
+      
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS基础之变量类型和计算</title>
+    <link href="http://yoursite.com/2017/10/25/JS%E5%9F%BA%E7%A1%80%E4%B9%8B%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%AE%A1%E7%AE%97/"/>
+    <id>http://yoursite.com/2017/10/25/JS基础之变量类型和计算/</id>
+    <published>2017-10-25T14:30:23.000Z</published>
+    <updated>2017-10-25T14:56:19.524Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="typeof运算符"><a href="#typeof运算符" class="headerlink" title="typeof运算符"></a>typeof运算符</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> underfined <span class="comment">//underfined</span></div><div class="line"><span class="keyword">typeof</span> <span class="string">'abc'</span> <span class="comment">//string</span></div><div class="line"><span class="keyword">typeof</span> <span class="number">123</span> <span class="comment">//number</span></div><div class="line"><span class="keyword">typeof</span> <span class="literal">true</span> <span class="comment">//boolean</span></div><div class="line"><span class="keyword">typeof</span> &#123;&#125; <span class="comment">//object</span></div><div class="line"><span class="keyword">typeof</span> [] <span class="comment">//object</span></div><div class="line"><span class="keyword">typeof</span> <span class="literal">null</span> <span class="comment">//object</span></div><div class="line"><span class="keyword">typeof</span> <span class="built_in">console</span>.log</div></pre></td></tr></table></figure><p><strong>typeof能识基本数据类型,引用类型无法区分,只能把函数区分出来</strong><br><a id="more"></a></p><h3 id="变量计算-强制类型转换情况"><a href="#变量计算-强制类型转换情况" class="headerlink" title="变量计算 - 强制类型转换情况"></a>变量计算 - 强制类型转换情况</h3><ul><li>字符串拼接</li><li>==运算符</li><li>if语句</li><li>逻辑运算</li></ul><h4 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">100</span>+<span class="number">10</span> <span class="comment">//10</span></div><div class="line"><span class="keyword">var</span> b = <span class="number">100</span>+<span class="string">'10'</span> <span class="comment">//'10010'</span></div></pre></td></tr></table></figure><h4 id="运算符"><a href="#运算符" class="headerlink" title="==运算符"></a>==运算符</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="number">100</span> == <span class="string">'100'</span> <span class="comment">//true</span></div><div class="line"><span class="number">0</span> ==<span class="string">''</span> /<span class="literal">true</span></div><div class="line"><span class="literal">null</span> == underfined <span class="comment">//true</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> (obj.a == <span class="literal">null</span>) &#123;</div><div class="line"><span class="comment">//这里相当于 obj,a === null || obj.a === underfined简写形式</span></div><div class="line"><span class="comment">//这是jquery源码中推荐的写法</span></div><div class="line"><span class="comment">//强迫症,其他一律 "==="</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><h4 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="literal">true</span></div><div class="line"><span class="keyword">if</span>(a) &#123;</div><div class="line"><span class="comment">//...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> b = <span class="number">100</span></div><div class="line"><span class="keyword">if</span>(b) &#123; <span class="comment">//true</span></div><div class="line"><span class="comment">//...</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> c = <span class="string">''</span></div><div class="line"><span class="keyword">if</span>(c)&#123; <span class="comment">//false</span></div><div class="line"><span class="comment">//...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="number">10</span> &amp;&amp; <span class="number">0</span>) <span class="comment">//0</span></div><div class="line">conlosle.log(<span class="string">''</span> || <span class="string">'abc'</span>) <span class="comment">//'abc'</span></div><div class="line"><span class="built_in">console</span>.log(!<span class="built_in">window</span>.abc) <span class="comment">//true</span></div><div class="line"></div><div class="line"><span class="comment">//判断一个变量会被当做true还是false</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">100</span></div><div class="line"><span class="built_in">console</span>.log(!!a)</div></pre></td></tr></table></figure><h4 id="js中内置函数"><a href="#js中内置函数" class="headerlink" title="js中内置函数"></a>js中内置函数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span></div><div class="line"><span class="built_in">Array</span></div><div class="line"><span class="built_in">Boolean</span></div><div class="line"><span class="built_in">Number</span></div><div class="line"><span class="built_in">String</span></div><div class="line"><span class="built_in">Function</span></div><div class="line"><span class="built_in">Date</span></div><div class="line"><span class="built_in">RegExp</span></div><div class="line"><span class="built_in">Error</span></div></pre></td></tr></table></figure><h4 id="js按储存方式区分变量类型"><a href="#js按储存方式区分变量类型" class="headerlink" title="js按储存方式区分变量类型"></a>js按储存方式区分变量类型</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//值类型</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">10</span></div><div class="line"><span class="keyword">var</span> b = a</div><div class="line">a = <span class="number">11</span></div><div class="line"><span class="built_in">console</span>.log(b) <span class="comment">//10</span></div><div class="line"></div><div class="line"><span class="comment">//引用类型</span></div><div class="line"><span class="keyword">var</span> obj1 = &#123;<span class="attr">x</span>:<span class="number">100</span>&#125;</div><div class="line"><span class="keyword">var</span> obj2 = obj1</div><div class="line">obj1.x = <span class="number">200</span></div><div class="line"><span class="built_in">console</span>.log(obj2,x) <span class="comment">//200</span></div></pre></td></tr></table></figure><h4 id="json"><a href="#json" class="headerlink" title="json"></a>json</h4><p>json只不过是一种JS对象而已<br><code>JSON.stringify({a:10,b:20})</code><br><code>JSON.parse(&#39;{&quot;a&quot;:10,&quot;b&quot;:20}&#39;)</code></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;typeof运算符&quot;&gt;&lt;a href=&quot;#typeof运算符&quot; class=&quot;headerlink&quot; title=&quot;typeof运算符&quot;&gt;&lt;/a&gt;typeof运算符&lt;/h3&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; underfined &lt;span class=&quot;comment&quot;&gt;//underfined&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;abc&#39;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//string&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;123&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//number&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//boolean&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; &amp;#123;&amp;#125; &lt;span class=&quot;comment&quot;&gt;//object&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; [] &lt;span class=&quot;comment&quot;&gt;//object&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//object&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;typeof能识基本数据类型,引用类型无法区分,只能把函数区分出来&lt;/strong&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript之引用类型(二)</title>
