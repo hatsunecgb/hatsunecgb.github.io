@@ -254,6 +254,152 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/31/node学习-二/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="度奈">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="哼着小曲儿的度奈君">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/31/node学习-二/" itemprop="url">node学习(二)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-31T21:27:51+08:00">
+                2017-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">node.js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="Buffer"><a href="#Buffer" class="headerlink" title="Buffer"></a>Buffer</h3><p>JavaScript 语言自身只有字符串数据类型，没有二进制数据类型。<br>但在处理像TCP流或文件流时，必须使用到二进制数据。因此在 Node.js中，定义了一个 Buffer 类，该类用来创建一个专门存放二进制数据的缓存区。<br>在 Node.js 中，Buffer 类是随 Node 内核一起发布的核心库。Buffer 库为 Node.js 带来了一种存储原始数据的方法，可以让 Node.js 处理二进制数据，每当需要在 Node.js 中处理I/O操作中移动的数据时，就有可能使用 Buffer 库。原始数据存储在 Buffer 类的实例中。一个 Buffer 类似于一个整数数组，但它对应于 V8 堆内存之外的一块原始内存。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/10/31/node学习-二/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/30/node学习-一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -352,7 +498,7 @@
 <li>我们通过var申明的变量并非全局而是该模块作用域下的
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/10/30/node学习-一/#espandi" rel="contents">
+            <a class="btn" href="/2017/10/30/node学习-一/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -617,7 +763,7 @@
           <h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//构造函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params">name,age</span>) </span>&#123;</div><div class="line">	<span class="keyword">this</span>,name = name</div><div class="line">&#125;</div><div class="line">Foo.prototype.alertName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	alert(<span class="keyword">this</span>.name)</div><div class="line">&#125;</div><div class="line"><span class="comment">//创建示例</span></div><div class="line"><span class="keyword">var</span> f= <span class="keyword">new</span> Foo(<span class="string">'张三'</span>)</div><div class="line">f.printName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log (<span class="keyword">this</span>.name)</div><div class="line"><span class="comment">//测试</span></div><div class="line">f.printName()</div><div class="line">f.alertName()</div><div class="line">f.toString() <span class="comment">//要去f.\_proto\_.\_proto\_中查找</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/10/28/JS基础之原型和原型链-原型链/#espandi" rel="contents">
+            <a class="btn" href="/2017/10/28/JS基础之原型和原型链-原型链/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -763,7 +909,7 @@
           <h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params">name,age</span>) </span>&#123;</div><div class="line">	<span class="keyword">this</span>.name = name</div><div class="line">	<span class="keyword">this</span>.age = age</div><div class="line">	<span class="keyword">this</span>.class = <span class="string">'class-1'</span></div><div class="line">	<span class="comment">//return this  //默认有这一行</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> Foo(<span class="string">'张三'</span>,<span class="number">20</span>)</div><div class="line"><span class="comment">//var f1 = new Foo ('李四',22)  //创建多个对象</span></div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/10/25/JS基础之原型和原型链-原型/#espandi" rel="contents">
+            <a class="btn" href="/2017/10/25/JS基础之原型和原型链-原型/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -910,7 +1056,7 @@
 <p><strong>typeof能识基本数据类型,引用类型无法区分,只能把函数区分出来</strong><br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/10/25/JS基础之变量类型和计算/#espandi" rel="contents">
+            <a class="btn" href="/2017/10/25/JS基础之变量类型和计算/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1056,7 +1202,7 @@
           <h3 id="Date类型"><a href="#Date类型" class="headerlink" title="Date类型"></a>Date类型</h3><p>Date 对象用于处理日期和时间。<br>可以通过 new 关键词来定义 Date 对象。
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/10/22/JavaScript之引用类型-二/#espandi" rel="contents">
+            <a class="btn" href="/2017/10/22/JavaScript之引用类型-二/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1202,7 +1348,7 @@
           <h3 id="Object类型"><a href="#Object类型" class="headerlink" title="Object类型"></a>Object类型</h3><h4 id="创建Object实例方法-字面量表示法"><a href="#创建Object实例方法-字面量表示法" class="headerlink" title="创建Object实例方法-字面量表示法"></a>创建Object实例方法-字面量表示法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">	name : <span class="string">"jack"</span></div><div class="line">	age : <span class="number">29</span> </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/10/22/JavaScript之引用类型-一/#espandi" rel="contents">
+            <a class="btn" href="/2017/10/22/JavaScript之引用类型-一/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1348,7 +1494,7 @@
           <h3 id="执行环境及作用域"><a href="#执行环境及作用域" class="headerlink" title="执行环境及作用域"></a>执行环境及作用域</h3><h4 id="全局执行环境"><a href="#全局执行环境" class="headerlink" title="全局执行环境"></a>全局执行环境</h4><p><strong>执行环境定义了变量或函数有权访问的其他数据,决定了他们各自的行为</strong><br>每个执行环境都有个与之关联的变量对象,环境中定义的所有变量和函数都保存在这个对象中.虽然我们编写的代码无法访问这个对象,但解析器在处理数据时会在后台使用它.
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/10/18/JavaScript之执行环境及作用域/#espandi" rel="contents">
+            <a class="btn" href="/2017/10/18/JavaScript之执行环境及作用域/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1494,153 +1640,7 @@
           <h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>ECMAScript中的函数在定义时不必指定是否返回值.实际上,任何函数在任何时候都可以通过return语句后跟要返回的值来实现返回值.return后的句子永远不会执行.<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/10/15/JavaScript之函数/#espandi" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/14/JavaScript之基本数据类型/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="度奈">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="哼着小曲儿的度奈君">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/14/JavaScript之基本数据类型/" itemprop="url">JavaScript之基本数据类型</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-14T22:03:36+08:00">
-                2017-10-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h4 id="typeof-操作符"><a href="#typeof-操作符" class="headerlink" title="typeof 操作符"></a>typeof 操作符</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span>操作符</div><div class="line"><span class="literal">undefined</span> :未定义</div><div class="line">boolean :布尔值</div><div class="line">string :字符串</div><div class="line">numbert :数字</div><div class="line">object 对象或者<span class="literal">null</span></div><div class="line"><span class="function"><span class="keyword">function</span> :函数</span></div></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/10/14/JavaScript之基本数据类型/#espandi" rel="contents">
+            <a class="btn" href="/2017/10/15/JavaScript之函数/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1732,7 +1732,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
